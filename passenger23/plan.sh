@@ -90,20 +90,6 @@ do_build() {
 
   build_line "Compiling passenger agent"
   bin/passenger-config compile-agent --auto
-  # curl -f -L -o agent-x86_64-linux.tar.gz -s -S --connect-timeout 30 --speed-time 30 --speed-limit 1 https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/${pkg_version}/agent-x86_64-linux.tar.gz
-
-  # mkdir -p buildout/support-binaries
-  # tar -xzf agent-x86_64-linux.tar.gz -C buildout/support-binaries
-  # patchelf --interpreter "$(pkg_path_for glibc)/lib/ld-linux-x86-64.so.1" --set-rpath "$LD_RUN_PATH" buildout/support-binaries/PassengerAgent
-  # curl -f -L -o nginx-1.10.2-x86_64-linux.tar.gz -s -S --connect-timeout 30 --speed-time 30 --speed-limit 1 https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/${pkg_version}/nginx-1.10.2-x86_64-linux.tar.gz
-
-  # curl -f -L -o rubyext-ruby-2.1.9-x86_64-linux.tar.gz -s -S --connect-timeout 30 --speed-time 30 --speed-limit 1 https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/${pkg_version}/rubyext-ruby-2.1.9-x86_64-linux.tar.gz
-
-  # rake nginx
-  # bin/passenger-config download-agent --force --suppress-binary-unusable-message
-  #
-  # build_line "Installing passenger runtime"
-  # bin/passenger-config install-standalone-runtime --auto
 
   $(pkg_path_for chrisortman/ruby)/bin/ruby src/ruby_native_extension/extconf.rb
 }
