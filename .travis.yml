@@ -1,4 +1,4 @@
 install:
-  - sudo curl https://raw.githubusercontent.com/habitat-sh/habitat/master/components/hab/install.sh | bash
+  - sudo install.sh
 script:
   - hab pkg build ruby21
