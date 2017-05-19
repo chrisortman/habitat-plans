@@ -1,5 +1,6 @@
 before_install:
 - mkdir -p /home/travis/.hab/cache/keys
+- mkdir build_logs
 - cp chrisortman-20160618040827.pub /home/travis/.hab/cache/keys
 - openssl aes-256-cbc -K $encrypted_3eb1048b073e_key -iv $encrypted_3eb1048b073e_iv
   -in chrisortman-20160618040827.sig.key.enc -out ~/.hab/cache/keys/chrisortman-20160618040827.sig.key
@@ -8,12 +9,12 @@ install:
 - curl https://raw.githubusercontent.com/habitat-sh/habitat/master/components/hab/install.sh
   | sudo bash
 script:
-- hab pkg build ruby21 -r /hab/studio/rubypass > /var/log/ruby21
-- hab pkg build passenger21 -r /hab/studio/rubypass > /var/log/passenger21
-- hab pkg build ruby23 -r /hab/studio/rubypass > /var/log/ruby23
-- hab pkg build passenger23 -r /hab/studio/rubypass > /var/log/passenger23
-- hab pkg build ruby24 -r /hab/studio/rubypass > /var/log/ruby24
-- hab pkg build passenger24 -r /hab/studio/rubypass > /var/log/passenger24
+- hab pkg build ruby21 -r /hab/studio/rubypass > build_logs/ruby21
+- hab pkg build passenger21 -r /hab/studio/rubypass > build_logs/passenger21
+- hab pkg build ruby23 -r /hab/studio/rubypass > build_logs/ruby23
+- hab pkg build passenger23 -r /hab/studio/rubypass > build_logs/passenger23
+- hab pkg build ruby24 -r /hab/studio/rubypass > build_logs/ruby24
+- hab pkg build passenger24 -r /hab/studio/rubypass > build_logs/passenger24
 - hab pkg upload results/*.hart
 env:
   global:
