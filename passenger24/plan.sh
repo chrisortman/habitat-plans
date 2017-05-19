@@ -64,7 +64,7 @@ pkg_build_deps=(
   core/coreutils
   core/make
   core/gcc
-  chrisortman/ruby
+  chrisortman/ruby/2.4.1
   core/patchelf
 )
 
