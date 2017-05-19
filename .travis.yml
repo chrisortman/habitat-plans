@@ -1,7 +1,7 @@
 before_install:
 - mkdir -p /home/travis/.hab/cache/keys
 - openssl aes-256-cbc -K $encrypted_3eb1048b073e_key -iv $encrypted_3eb1048b073e_iv
-  -in chrisortman-20160618040827.sig.key.enc -out chrisortman-20160618040827.sig.key
+  -in chrisortman-20160618040827.sig.key.enc -out ~/.hab/cache/keys/chrisortman-20160618040827.sig.key
   -d
 install:
 - curl https://raw.githubusercontent.com/habitat-sh/habitat/master/components/hab/install.sh
