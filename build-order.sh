@@ -1,6 +1,8 @@
-hab pkg build ruby21
-hab pkg build passenger21
-hab pkg build ruby23
-hab pkg build passenger23
-hab pkg build ruby24
-hab pkg build passenger24
+set -eu
+
+build ruby21
+build passenger21
+build ruby23
+build passenger23
+build ruby24
+build passenger24
