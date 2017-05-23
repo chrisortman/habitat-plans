@@ -14,7 +14,8 @@ pkg_origin=chrisortman
 
 # Required.
 # Sets the version of the package.
-pkg_version="5.1.2"
+pkg_version="5.1.2+ruby2.4.1"
+pkg_dirname="passenger-5.1.2"
 
 # Optional.
 # The name and email address of the package maintainer.
@@ -30,7 +31,7 @@ pkg_version="5.1.2"
 # will work. Typically, the relative path for the URL is partially constructed
 # from the pkg_name and pkg_version values; however, this convention is not
 # required.
-pkg_source="http://s3.amazonaws.com/phusion-passenger/releases/passenger-${pkg_version}.tar.gz"
+pkg_source="http://s3.amazonaws.com/phusion-passenger/releases/passenger-5.1.2.tar.gz"
 
 # Optional.
 # The resulting filename for the download, typically constructed from the
