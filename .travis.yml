@@ -10,11 +10,7 @@ install:
   | sudo bash
 script:
 - hab pkg build ruby21 -r /hab/studio/rubypass > build_logs/ruby21
-- hab pkg build passenger21 -r /hab/studio/rubypass > build_logs/passenger21
-- hab pkg build ruby23 -r /hab/studio/rubypass > build_logs/ruby23
-- hab pkg build passenger23 -r /hab/studio/rubypass > build_logs/passenger23
 - hab pkg build ruby24 -r /hab/studio/rubypass > build_logs/ruby24
-- hab pkg build passenger24 -r /hab/studio/rubypass > build_logs/passenger24
 - travis_wait hab pkg upload results/*.hart
 env:
   global:
