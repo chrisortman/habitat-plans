@@ -40,4 +40,5 @@ do_install() {
   do_default_install
   gem update --system --no-document
   gem install rb-readline --no-document
+  gem install eye --no-ri --no-rdoc
 }
