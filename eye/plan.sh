@@ -65,7 +65,7 @@ set -e
 if test -n "$DEBUG"; then set -x; fi
 
 export GEM_HOME="$GEM_HOME"
-export GEM_PATH="$GEM_PATH"
+export GEM_PATH="$GEM_PATH:\$GEM_PATH"
 unset RUBYOPT GEMRC
 
 exec $(pkg_path_for ruby)/bin/ruby ${bin}.real \$@
