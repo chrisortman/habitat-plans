@@ -13,12 +13,15 @@ pkg_deps=(
   core/busybox-static
   core/glibc
 
+  # This dependency required by 
+  # sigar gem ... not sure if it is
+  # something transitive it needs or if it really needs perl :(
+  core/perl
 )
 pkg_build_deps=(
   core/coreutils
   core/make
   core/gcc
-  core/perl
 )
 
 do_prepare() {
