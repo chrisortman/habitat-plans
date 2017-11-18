@@ -3,3 +3,22 @@ paths = [
   "eye/*"
 ]
 channels = ["stable"]
+
+[mfold]
+paths = [
+  "mfold/*"
+]
+channels = ["stable"]
+
+[viennarna]
+paths = [
+  "viennarna/*"
+]
+channels = ["stable"]
+
+[elixir]
+paths = [
+  "elixir/*"
+]
+channels = ["stable"]
+
