@@ -1,6 +1,6 @@
 pkg_name=eye
 pkg_origin=chrisortman
-pkg_version="0.9.2"
+pkg_version="0.9.4"
 pkg_maintainer="chris ortman <humans@habitat.sh>"
 pkg_license=('MIT')
 pkg_upstream_url=https://github.com/kostya/eye
