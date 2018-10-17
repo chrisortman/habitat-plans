@@ -1,6 +1,6 @@
 pkg_name=eye
 pkg_origin=chrisortman
-pkg_version="0.9.4"
+pkg_version="0.10.0"
 pkg_maintainer="chris ortman <humans@habitat.sh>"
 pkg_license=('MIT')
 pkg_upstream_url=https://github.com/kostya/eye
@@ -9,7 +9,7 @@ pkg_lib_dirs=(lib)
 pkg_include_dirs=(include)
 pkg_bin_dirs=(bin)
 pkg_deps=(
-  core/ruby/2.4.2
+  core/ruby
   core/busybox-static
   core/glibc
 
