@@ -9,7 +9,7 @@ pkg_lib_dirs=(lib)
 pkg_include_dirs=(include)
 pkg_bin_dirs=(bin)
 pkg_deps=(
-  core/ruby24
+  core/ruby/2.4.2
   core/busybox-static
   core/glibc
 
