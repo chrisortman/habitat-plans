@@ -68,7 +68,7 @@ export GEM_HOME="$GEM_HOME"
 export GEM_PATH="$GEM_PATH:\$GEM_PATH"
 unset RUBYOPT GEMRC
 
-exec $(pkg_path_for ruby)/bin/ruby ${bin}.real \$@
+exec $(pkg_path_for ruby24)/bin/ruby ${bin}.real \$@
 EOF
   chmod -v 755 "$bin"
 }
