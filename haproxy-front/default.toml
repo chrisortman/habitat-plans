@@ -1,0 +1,19 @@
+# Use this file to templatize your application's native configuration files.
+# See the docs at https://www.habitat.sh/docs/create-packages-configure/.
+# You can safely delete this file if you don't need it.
+
+enable_ssl = false
+
+[[servers]]
+name = "test1"
+domain = "test1.example.com"
+backend_host = "127.0.0.1"
+backend_port = 8888
+
+[[servers]]
+name = "test2"
+domain = "test2.example.com"
+backend_host = "127.0.0.1"
+backend_port = 8889
+
+
