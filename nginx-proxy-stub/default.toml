@@ -1,13 +1,14 @@
 # Use this file to templatize your application's native configuration files.
 # See the docs at https://www.habitat.sh/docs/create-packages-configure/.
 # You can safely delete this file if you don't need it.
+
 [[servers]]
-domain = "test1.dev.cortman"
+domain = "test1.example.com"
 port = 8888
 echo = "Welcome to test 1"
 
 [[servers]]
-domain = "test2.dev.cortman"
+domain = "test2.example.com"
 port = 8889
 echo = "This is the test 2 site"
 
