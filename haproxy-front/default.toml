@@ -3,6 +3,7 @@
 # You can safely delete this file if you don't need it.
 
 enable_ssl = false
+certificate_path = "/etc/ssl/all.pem"
 
 [[servers]]
 name = "test1"
