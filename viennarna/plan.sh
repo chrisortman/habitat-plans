@@ -8,12 +8,13 @@
 # metadata, and so on.
 pkg_name=ViennaRNA
 pkg_origin=chrisortman
-pkg_version="2.3.3"
+pkg_version="2.4.12"
 pkg_source="http://www.tbi.univie.ac.at/RNA/packages/source/${pkg_name}-${pkg_version}.tar.gz"
-pkg_shasum="cf92c05e54dff32c2135433b6ebaa5330c05de02a1ae8b7c3b7a865d42eea514"
+pkg_shasum="3fca7bd5fd1ed48b6c4551be653aa320373230a97904b35b5a3d7dda8b1ac232"
 
 pkg_deps=(
   core/glibc
+  core/gcc-libs
   core/libcxx
 )
 
@@ -37,14 +38,12 @@ do_prepare() {
 
 do_build() {
 
-  export CPPFLAGS="${CPPFLAGS} ${CFLAGS}"
   ./configure \
       --build=x86_64-linux-gnu \
 1     --host=x86_64-linux-gnu \
 1     --target=x86_64-linux-gnu \
       --prefix=$pkg_prefix \
       --disable-debug \
-      --disable-openmp \
       --without-perl \
       --without-python && make
 }
